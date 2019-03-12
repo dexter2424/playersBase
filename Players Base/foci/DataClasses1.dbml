@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database1" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True" SettingsObjectName="foci.Properties.Settings" SettingsPropertyName="Database1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Csapat" Member="Csapats">
+    <Type Name="Csapat">
+      <Column Name="CsapatSK" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CsapatNév" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ország" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Monogram" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="LigaFK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Csapat_Focistak" Member="Focistaks" ThisKey="CsapatSK" OtherKey="CsapatFK" Type="Focistak" />
+      <Association Name="Liga_Csapat" Member="Liga" ThisKey="LigaFK" OtherKey="LigaID" Type="Liga" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Poszt" Member="Poszts">
+    <Type Name="Poszt">
+      <Column Name="PosztID" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Poszt" Member="Poszt1" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Poszt_Focistak" Member="Focistaks" ThisKey="PosztID" OtherKey="PosztFK" Type="Focistak" />
+    </Type>
+  </Table>
+  <Table Name="dbo.experience" Member="experiences">
+    <Type Name="experience">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Speed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Shot" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pass" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Dribbling" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Defence" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Physical" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="experience_Focistak" Member="Focistaks" ThisKey="ID" OtherKey="ExpFK" Type="Focistak" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Focistak" Member="Focistaks">
+    <Type Name="Focistak">
+      <Column Name="FocistaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Név" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SzulDat" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="CsapatFK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PosztFK" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ExpFK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SHO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PAS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DRI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DEF" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PHY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Csapat_Focistak" Member="Csapat" ThisKey="CsapatFK" OtherKey="CsapatSK" Type="Csapat" IsForeignKey="true" />
+      <Association Name="experience_Focistak" Member="experience" ThisKey="ExpFK" OtherKey="ID" Type="experience" IsForeignKey="true" />
+      <Association Name="Poszt_Focistak" Member="Poszt" ThisKey="PosztFK" OtherKey="PosztID" Type="Poszt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Liga" Member="Ligas">
+    <Type Name="Liga">
+      <Column Name="LigaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LigaNév" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Liga_Csapat" Member="Csapats" ThisKey="LigaID" OtherKey="LigaFK" Type="Csapat" />
+    </Type>
+  </Table>
+</Database>

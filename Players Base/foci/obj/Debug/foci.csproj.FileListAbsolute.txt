@@ -1,0 +1,15 @@
+c:\users\dexter\documents\visual studio 2017\Projects\foci\foci\bin\Debug\Database1.mdf
+c:\users\dexter\documents\visual studio 2017\Projects\foci\foci\bin\Debug\Database1_log.ldf
+c:\users\dexter\documents\visual studio 2017\Projects\foci\foci\bin\Debug\foci.exe.config
+c:\users\dexter\documents\visual studio 2017\Projects\foci\foci\bin\Debug\foci.exe
+c:\users\dexter\documents\visual studio 2017\Projects\foci\foci\bin\Debug\foci.pdb
+c:\users\dexter\documents\visual studio 2017\Projects\foci\foci\obj\Debug\foci.csprojResolveAssemblyReference.cache
+c:\users\dexter\documents\visual studio 2017\Projects\foci\foci\obj\Debug\foci.Form1.resources
+c:\users\dexter\documents\visual studio 2017\Projects\foci\foci\obj\Debug\foci.Properties.Resources.resources
+c:\users\dexter\documents\visual studio 2017\Projects\foci\foci\obj\Debug\foci.csproj.GenerateResource.Cache
+c:\users\dexter\documents\visual studio 2017\Projects\foci\foci\obj\Debug\foci.exe
+c:\users\dexter\documents\visual studio 2017\Projects\foci\foci\obj\Debug\foci.pdb
+C:\Users\Dexter\documents\visual studio 2017\Projects\foci\foci\obj\Debug\foci.Form2.resources
+C:\Users\Dexter\documents\visual studio 2017\Projects\foci\foci\obj\Debug\foci.UserControl1.resources
+C:\Users\Dexter\documents\visual studio 2017\Projects\foci\foci\obj\Debug\foci.UserControl2.resources
+C:\Users\Dexter\documents\visual studio 2017\Projects\foci\foci\obj\Debug\foci.UserControl3.resources

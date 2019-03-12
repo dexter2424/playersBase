@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.75, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="83239185-06e5-4673-8dea-e0579ab09176" absoluteBounds="3.625, 2, 2, 1.7708968098958333">
+      <DataClassMoniker Name="/DataClasses1DataContext/Csapat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1907d26a-0697-4ae9-abb2-1e400ae2c354" absoluteBounds="3.64, 2.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c844bfd-3279-4f30-8de1-ac4f9a44ca10" absoluteBounds="3.625, 4.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClasses1DataContext/Poszt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16c6afe8-361b-43cb-a120-8db7ca4209f5" absoluteBounds="3.64, 4.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11111410-a51d-4e78-85e3-371b87cd1c11" absoluteBounds="3.625, 5.625, 2, 2.1554996744791675">
+      <DataClassMoniker Name="/DataClasses1DataContext/experience" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da711caa-b5af-4933-90e0-27b4a9a3539a" absoluteBounds="3.64, 6.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6930a347-159e-46e9-b3d4-9f8004925557" absoluteBounds="9.5, 3.875, 2, 3.1170068359375009">
+      <DataClassMoniker Name="/DataClasses1DataContext/Focistak" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9c02d6b-e9d8-4ea3-a2b0-31b50dd06858" absoluteBounds="9.515, 4.335, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fc00ea46-188f-43f7-8412-97f5d6d7f242" absoluteBounds="0.875, 2.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClasses1DataContext/Liga" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fc335c26-21e2-487b-92cc-26fd47e7cd66" absoluteBounds="0.89, 2.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 2.88544840494792); (10.5 : 2.88544840494792); (10.5 : 3.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Csapat/Csapat_Focistak" />
+      <nodes>
+        <classShapeMoniker Id="83239185-06e5-4673-8dea-e0579ab09176" />
+        <classShapeMoniker Id="6930a347-159e-46e9-b3d4-9f8004925557" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 6.30850341796875); (9.5 : 6.30850341796875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/experience/experience_Focistak" />
+      <nodes>
+        <classShapeMoniker Id="11111410-a51d-4e78-85e3-371b87cd1c11" />
+        <classShapeMoniker Id="6930a347-159e-46e9-b3d4-9f8004925557" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 4.72199625651042); (9.5 : 4.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Poszt/Poszt_Focistak" />
+      <nodes>
+        <classShapeMoniker Id="0c844bfd-3279-4f30-8de1-ac4f9a44ca10" />
+        <classShapeMoniker Id="6930a347-159e-46e9-b3d4-9f8004925557" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 2.97199625651042); (3.625 : 2.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Liga/Liga_Csapat" />
+      <nodes>
+        <classShapeMoniker Id="fc00ea46-188f-43f7-8412-97f5d6d7f242" />
+        <classShapeMoniker Id="83239185-06e5-4673-8dea-e0579ab09176" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
